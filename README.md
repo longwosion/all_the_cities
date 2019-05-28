@@ -20,7 +20,35 @@ end
 ## Usage
 ```elixir
   cities = AllTheCities.load()
-  
+
+  Enum.filter(cities, fn c -> :binary.match(c.name, "Albuquerque") !== :nomatch end)
+
+  #[
+  #  %AllTheCities.City{
+  #    admin_code: "NM",
+  #    alt_country: "",
+  #    country: "US",
+  #    feature_code: "PPL",
+  #    lat: 35.16199,
+  #    lng: -106.6428,
+  #    muni: "",
+  #    muni_sub: "",
+  #    name: "Los Ranchos de Albuquerque",
+  #    population: 6024
+  #  },
+  #  %AllTheCities.City{
+  #    admin_code: "NM",
+  #    alt_country: "",
+  #    country: "US",
+  #    feature_code: "PPLA2",
+  #    lat: 35.08449,
+  #    lng: -106.65114,
+  #    muni: "",
+  #    muni_sub: "",
+  #    name: "Albuquerque",
+  #    population: 545852
+  #  }
+  #]  
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)

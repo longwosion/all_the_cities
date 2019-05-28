@@ -10,6 +10,15 @@ defmodule AllTheCities.MixProject do
         "All the 138,398 cities of the world with a population of at least 1000 inhabitants, in a big array.",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: [
+        licenses: ["MIT"],
+        links: %{
+          "GitHub" => "https://github.com/longwosion/all_the_cities",
+          "Docs" => "https://hexdocs.pm/all_the_cities/readme.html",
+          "Author" => "http://github.com/longwosion"
+        },
+        maintainers: ["longwosion"]
+      ],
       docs: [
         extras: ["README.md"]
       ],
